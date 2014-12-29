@@ -1,5 +1,6 @@
 package danielle.dev.com.flickrviewer;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,6 +30,9 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "clicked locations", Toast.LENGTH_SHORT ).show();
+
+                Intent i = new Intent(MainActivity.this, LocationsActivity.class);
+                startActivity(i);
             }
         });
 
@@ -36,6 +40,9 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "clicked search", Toast.LENGTH_SHORT ).show();
+                
+                Intent i = new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(i);
             }
         });
 
