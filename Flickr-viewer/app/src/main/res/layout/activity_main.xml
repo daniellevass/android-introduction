@@ -2,11 +2,39 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffcc00">
+    android:background="#ffcc00"
+    android:padding="10dp">
 
     <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/lblTitle"
+        android:text="Welcome to\nDanielle's Flickr Viewer App"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="#101010"/>
+
+    <Button
+        android:id="@+id/btnLocations"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/lblTitle"
+        android:layout_centerHorizontal="true"
+        android:text="Top Locations"
+        />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btnLocations"
+        android:layout_centerHorizontal="true"
+        android:text="Search"
+        />
 
 </RelativeLayout>
