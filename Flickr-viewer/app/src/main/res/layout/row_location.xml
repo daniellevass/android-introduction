@@ -1,0 +1,44 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#dedede"
+        android:padding="20dp"
+>
+
+    <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_centerVertical="true"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imgIcon"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/lblCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hong Kong"
+                android:textSize="24sp"/>
+
+        <TextView
+                android:id="@+id/lblCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="China"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
