@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dedede">
+
+
+    <ImageView
+        android:id="@+id/bigImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/profile_background"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_height="2dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/bigImage"
+        android:background="#BFBFBF"
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/danielle"/>
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:text="Danielle Vass"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#212121"
+        android:padding="20dp"
+        android:textSize="32sp"
+        android:gravity="right"/>
+
+
+    <!--location-->
+    <ImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_location"
+        android:layout_below="@id/lblName"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imgLocation"
+        android:layout_alignBottom="@id/imgLocation"
+        android:layout_toRightOf="@id/imgLocation"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="Bath, England"
+        android:textSize="16sp"
+        android:textColor="#212121"/>
+
+
+    <!--github-->
+    <ImageView
+        android:id="@+id/imgGithub"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_github"
+        android:layout_below="@id/imgLocation"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imgGithub"
+        android:layout_alignBottom="@id/imgGithub"
+        android:layout_toRightOf="@id/imgGithub"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="daniellevass"
+        android:textSize="16sp"
+        android:textColor="#212121"/>
+
+    <!--birthday-->
+    <ImageView
+        android:id="@+id/imgBirthday"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_birthday"
+        android:layout_below="@id/imgGithub"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imgBirthday"
+        android:layout_alignBottom="@id/imgBirthday"
+        android:layout_toRightOf="@id/imgBirthday"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="21st October"
+        android:textSize="16sp"
+        android:textColor="#212121"/>
+
+    <!--birthday-->
+    <ImageView
+        android:id="@+id/imgWebsite"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_website"
+        android:layout_below="@id/imgBirthday"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imgWebsite"
+        android:layout_alignBottom="@id/imgWebsite"
+        android:layout_toRightOf="@id/imgWebsite"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="wwww.de-velopment.com"
+        android:textSize="16sp"
+        android:textColor="#212121"/>
+
+
+
+</RelativeLayout>
