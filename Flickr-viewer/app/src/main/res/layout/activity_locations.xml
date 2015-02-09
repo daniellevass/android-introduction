@@ -1,7 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1565C0"
+    android:background="#dedede"
 >
+
+    <ListView
+        android:id="@+id/listLocations"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:divider="#212121"
+        android:dividerHeight="2dp"
+        />
 
 </RelativeLayout>
