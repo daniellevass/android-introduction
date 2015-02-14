@@ -2,8 +2,6 @@ package danielle.dev.com.flickrviewer;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -17,9 +15,9 @@ import java.util.List;
 public class LocationsActivity extends ActionBarActivity {
 
     private ListView listLocations;
-    private List<String> cities;
-    private List<String> countries;
-    private List<Integer> flags;
+
+
+    private List<CityLocation> locations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,57 +26,31 @@ public class LocationsActivity extends ActionBarActivity {
 
         listLocations = (ListView)findViewById(R.id.listLocations);
 
-        cities = new ArrayList<String>();
+        locations = new ArrayList<CityLocation>();
 
-        cities.add("Hong Kong");
-        cities.add("London");
-        cities.add("San Francisco");
-        cities.add("Madrid");
-        cities.add("Sydney");
-        cities.add("New York");
-        cities.add("Bath");
-        cities.add("Cardiff");
-        cities.add("Dallas");
-
-
-        countries = new ArrayList<String>();
-
-        countries.add("China");
-        countries.add("United Kingdom");
-        countries.add("USA");
-        countries.add("Spain");
-        countries.add("Australia");
-        countries.add("USA");
-        countries.add("United Kingdon");
-        countries.add("Wales");
-        countries.add("USA");
-
-        flags = new ArrayList<Integer>();
-
-        flags.add(R.drawable.hongkong);
-        flags.add(R.drawable.unitedkingdom);
-        flags.add(R.drawable.unitedstates);
-        flags.add(R.drawable.spain);
-        flags.add(R.drawable.australia);
-        flags.add(R.drawable.unitedstates);
-        flags.add(R.drawable.unitedkingdom);
-        flags.add(R.drawable.wales);
-        flags.add(R.drawable.unitedstates);
+        locations.add(new CityLocation("Hong Kong", "China", R.drawable.hongkong));
+        locations.add(new CityLocation("Bath", "UK", R.drawable.unitedkingdom));
+        locations.add(new CityLocation("San Francisco", "USA", R.drawable.unitedstates));
+        locations.add(new CityLocation("Spain", "Spain", R.drawable.spain));
+        locations.add(new CityLocation("Sydney", "Australia", R.drawable.australia));
+        locations.add(new CityLocation("London", "United Kingdom", R.drawable.unitedkingdom));
+        locations.add(new CityLocation("New York", "USA", R.drawable.unitedstates));
 
 
 
-        LocationAdapter adapter = new LocationAdapter(cities);
+        //set up the adapter
+        LocationAdapter adapter = new LocationAdapter(locations);
 
+        //set the adapter to our listview
         listLocations.setAdapter(adapter);
 
 
     }
 
 
+    private class LocationAdapter extends ArrayAdapter<CityLocation> {
 
-    private class LocationAdapter extends ArrayAdapter<String> {
-
-        public LocationAdapter(List<String> items) {
+        public LocationAdapter(List<CityLocation> items) {
             super(LocationsActivity.this, 0, items);
         }
 
@@ -93,14 +65,13 @@ public class LocationsActivity extends ActionBarActivity {
             TextView lblCity = (TextView)convertView.findViewById(R.id.lblCity);
             TextView lblCountry = (TextView)convertView.findViewById(R.id.lblCountry);
 
-            String city = cities.get(position);
-            String country = countries.get(position);
-            int flag = flags.get(position);
+            //get the location
+            CityLocation location = locations.get(position);
 
-
-            imgIcon.setImageResource(flag);
-            lblCountry.setText(country);
-            lblCity.setText(city);
+            //set the ui elements to the location
+            imgIcon.setImageResource(location.getFlag());
+            lblCountry.setText(location.getCountry());
+            lblCity.setText(location.getCity());
 
             return convertView;
         }// end get view
