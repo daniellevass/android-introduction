@@ -24,6 +24,10 @@
             android:name=".SearchActivity"
             android:label="@string/title_activity_search" >
         </activity>
+        <activity
+            android:name=".TopPhotos"
+            android:label="@string/title_activity_top_photos" >
+        </activity>
     </application>
 
 </manifest>
