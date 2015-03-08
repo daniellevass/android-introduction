@@ -1,6 +1,10 @@
 package danielle.dev.com.flickrviewer;
 
-public class CityLocation {
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
+public class TopLocationObject implements Serializable {
 
     private String city;
     private String country;
@@ -18,7 +22,7 @@ public class CityLocation {
         return flag;
     }
 
-    public CityLocation(String city, String country, Integer flag) {
+    public TopLocationObject(String city, String country, Integer flag) {
         this.city = city;
         this.country = country;
         this.flag = flag;
