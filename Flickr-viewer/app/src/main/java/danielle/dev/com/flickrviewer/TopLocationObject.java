@@ -1,27 +1,30 @@
 package danielle.dev.com.flickrviewer;
 
-public class TopLocationObject {
+import android.os.Parcelable;
 
-    private String cityName;
-    private String countryName;
-    private Integer flagResource;
+import java.io.Serializable;
 
-    public String getCityName() {
-        return cityName;
+public class TopLocationObject implements Serializable {
+
+    private String city;
+    private String country;
+    private Integer flag;
+
+    public String getCity() {
+        return city;
     }
 
-    public String getCountryName() {
-        return countryName;
+    public String getCountry() {
+        return country;
     }
 
-    public Integer getFlagResource() {
-        return flagResource;
+    public Integer getFlag() {
+        return flag;
     }
 
-    public TopLocationObject(String cityName, String countryName,
-                             Integer flagResource) {
-        this.cityName = cityName;
-        this.countryName = countryName;
-        this.flagResource = flagResource;
+    public TopLocationObject(String city, String country, Integer flag) {
+        this.city = city;
+        this.country = country;
+        this.flag = flag;
     }
 }

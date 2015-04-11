@@ -1,9 +1,12 @@
 package danielle.dev.com.flickrviewer;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -17,7 +20,11 @@ public class LocationsActivity extends ActionBarActivity {
     private ListView listLocations;
 
 
+<<<<<<< HEAD
     private List<TopLocationObject> topLocations;
+=======
+    private List<TopLocationObject> locations;
+>>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +33,7 @@ public class LocationsActivity extends ActionBarActivity {
 
         listLocations = (ListView)findViewById(R.id.listLocations);
 
+<<<<<<< HEAD
         topLocations = new ArrayList<TopLocationObject>();
 
         topLocations.add(new TopLocationObject("Hong Kong", "China", R.drawable.hongkong));
@@ -36,6 +44,17 @@ public class LocationsActivity extends ActionBarActivity {
         topLocations.add(new TopLocationObject("Sydney", "Australia", R.drawable.australia));
         topLocations.add(new TopLocationObject("London", "United Kingdom", R.drawable.unitedkingdom));
         topLocations.add(new TopLocationObject("New York", "USA", R.drawable.unitedstates));
+=======
+        locations = new ArrayList<TopLocationObject>();
+
+        locations.add(new TopLocationObject("Hong Kong", "China", R.drawable.hongkong));
+        locations.add(new TopLocationObject("Bath", "UK", R.drawable.unitedkingdom));
+        locations.add(new TopLocationObject("San Francisco", "USA", R.drawable.unitedstates));
+        locations.add(new TopLocationObject("Spain", "Spain", R.drawable.spain));
+        locations.add(new TopLocationObject("Sydney", "Australia", R.drawable.australia));
+        locations.add(new TopLocationObject("London", "United Kingdom", R.drawable.unitedkingdom));
+        locations.add(new TopLocationObject("New York", "USA", R.drawable.unitedstates));
+>>>>>>> origin/master
 
 
 
@@ -47,6 +66,24 @@ public class LocationsActivity extends ActionBarActivity {
 
 
 
+<<<<<<< HEAD
+=======
+        listLocations.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("FLICKR_TAG", "clicked on = " + position);
+
+                Intent i = new Intent(LocationsActivity.this, SpecificLocationActivity.class);
+
+                i.putExtra("EXTRA_TOP_LOCATION", locations.get(position));
+
+                startActivity(i);
+
+            }
+        });
+
+
+>>>>>>> origin/master
     }
 
 
@@ -68,7 +105,11 @@ public class LocationsActivity extends ActionBarActivity {
             TextView lblCountry = (TextView)convertView.findViewById(R.id.lblCountry);
 
             //get the location
+<<<<<<< HEAD
             TopLocationObject location = topLocations.get(position);
+=======
+            TopLocationObject location = locations.get(position);
+>>>>>>> origin/master
 
             //set the ui elements to the location
             imgIcon.setImageResource(location.getFlagResource());
