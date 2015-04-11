@@ -27,13 +27,13 @@
             android:label="@string/title_activity_top_photos" >
         </activity>
         <activity
-<<<<<<< HEAD
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile" >
-=======
+            </activity>
+        <activity
             android:name=".SpecificLocationActivity"
             android:label="@string/title_activity_specific_location" >
->>>>>>> origin/master
+
         </activity>
     </application>
 
