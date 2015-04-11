@@ -2,24 +2,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffcc00"
+    android:background="#212121"
     android:padding="10dp">
 
     <TextView
         android:id="@+id/lblTitle"
-        android:text="Welcome to\nDanielle's Flickr Viewer App"
+        android:text="Welcome to\nDanielle's\nHoliday Finder App"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:textSize="24sp"
-        android:textColor="#101010"/>
+        android:textSize="32sp"
+        android:textColor="#e9e9e9"/>
 
     <ImageView
         android:id="@+id/imgIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="20dp"
         android:src = "@drawable/android_icon"
         android:layout_below="@id/lblTitle"
         android:layout_centerHorizontal="true"
@@ -32,18 +32,7 @@
         android:padding="10dp"
         android:layout_below="@id/imgIcon"
         android:layout_centerHorizontal="true"
-        android:text="Top Locations"
-        />
-
-    <Button
-        android:id="@+id/btnPhotographs"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:padding="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/btnLocations"
-        android:layout_centerHorizontal="true"
-        android:text="Top Photos"
+        android:text="Locations"
         />
 
     <Button
@@ -52,9 +41,20 @@
         android:layout_height="60dp"
         android:padding="10dp"
         android:layout_marginTop="30dp"
-        android:layout_below="@id/btnPhotographs"
+        android:layout_below="@id/btnLocations"
         android:layout_centerHorizontal="true"
         android:text="Search"
+        />
+
+    <Button
+        android:id="@+id/btnProfile"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/btnSearch"
+        android:layout_centerHorizontal="true"
+        android:text="Profile"
         />
 
 </RelativeLayout>

@@ -15,7 +15,7 @@ public class MainActivity extends ActionBarActivity {
 
     private Button btnLocations;
     private Button btnSearch;
-    private Button btnTopPhotos;
+    private Button btnProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
 
         btnLocations = (Button) findViewById(R.id.btnLocations);
         btnSearch = (Button) findViewById(R.id.btnSearch);
-        btnTopPhotos = (Button) findViewById(R.id.btnPhotographs);
+        btnProfile = (Button) findViewById(R.id.btnProfile);
 
 
 
@@ -44,16 +44,15 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "clicked search", Toast.LENGTH_SHORT ).show();
                 
-                Intent i = new Intent(MainActivity.this, SearchActivity.class);
-                startActivity(i);
+                //Intent i = new Intent(MainActivity.this, SearchActivity.class);
+                //startActivity(i);
             }
         });
 
-        btnTopPhotos.setOnClickListener(new View.OnClickListener() {
+        btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent i = new Intent(MainActivity.this, TopPhotos.class);
+                Intent i = new Intent(MainActivity.this, ProfileActivity.class);
                 startActivity(i);
             }
         });

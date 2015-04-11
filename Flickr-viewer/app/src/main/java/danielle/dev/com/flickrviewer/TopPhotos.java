@@ -33,36 +33,24 @@ public class TopPhotos extends ActionBarActivity {
 
         urls = new ArrayList<String>();
 
-        /*
-        colours.add("#ffcc00");
-        colours.add("#F44336");
-        colours.add("#E91E63");
-        colours.add("#9C27B0");
-        colours.add("#673AB7");
-        colours.add("#3F51B5");
-        colours.add("#2196F3");
-        colours.add("#03A9F4");
-        colours.add("#00BCD4");
-        colours.add("#009688");
-        colours.add("#4CAF50");
-        colours.add("#8BC34A");
-        colours.add("#CDDC39");
-        colours.add("#FFEB3B");
-        colours.add("#FFC107");
-        colours.add("#FF9800");
-        colours.add("#FF5722");
-        */
+        urls.add("#ffcc00");
+        urls.add("#F44336");
+        urls.add("#E91E63");
+        urls.add("#9C27B0");
+        urls.add("#673AB7");
+        urls.add("#3F51B5");
+        urls.add("#2196F3");
+        urls.add("#03A9F4");
+        urls.add("#00BCD4");
+        urls.add("#009688");
+        urls.add("#4CAF50");
+        urls.add("#8BC34A");
+        urls.add("#CDDC39");
+        urls.add("#FFEB3B");
+        urls.add("#FFC107");
+        urls.add("#FF9800");
+        urls.add("#FF5722");
 
-        urls.add("https://farm3.staticflickr.com/2570/4093096412_2163a6e270_z.jpg?zz=1");
-        urls.add("https://farm5.staticflickr.com/4007/4244993150_93f9fe3180_z.jpg");
-        urls.add("https://farm3.staticflickr.com/2447/3671737557_6bffe3e901_z.jpg");
-        urls.add("https://farm5.staticflickr.com/4030/4207122005_b28581efb0_z.jpg?zz=1");
-        urls.add("https://farm8.staticflickr.com/7283/8713809821_ac665e7038_z.jpg");
-        urls.add("https://farm3.staticflickr.com/2700/4322416621_4316cb0339_z.jpg");
-        urls.add("https://farm8.staticflickr.com/7342/14129467036_142f71448b_z.jpg");
-        urls.add("https://farm4.staticflickr.com/3053/2799565594_72a0a888c7_z.jpg");
-        urls.add("https://farm1.staticflickr.com/199/503348013_8d8ad1e391_z.jpg");
-        urls.add("https://farm5.staticflickr.com/4052/4267216622_8c4b46450c_z.jpg");
 
         TopImageAdapter adapter = new TopImageAdapter(TopPhotos.this);
         gridView.setAdapter(adapter);
@@ -103,16 +91,13 @@ public class TopPhotos extends ActionBarActivity {
 
             String url = urls.get(position);
 
-
-            //imgPhoto.setBackgroundColor(Color.parseColor(colour));
-
-            Picasso.with(mContext).load(url).into(imgPhoto);
+            imgPhoto.setBackgroundColor(Color.parseColor(url));
 
             return convertView;
-        }
+        }//end get view
 
 
-    }
+    }//end top image adapter
 
 
 }

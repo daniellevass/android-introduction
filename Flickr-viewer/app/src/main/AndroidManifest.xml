@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="danielle.dev.com.flickrviewer" >
 
-
     <uses-permission android:name="android.permission.INTERNET" />
-
 
     <application
         android:allowBackup="true"
@@ -25,12 +23,12 @@
             android:label="@string/title_activity_locations" >
         </activity>
         <activity
-            android:name=".SearchActivity"
-            android:label="@string/title_activity_search" >
-        </activity>
-        <activity
             android:name=".TopPhotos"
             android:label="@string/title_activity_top_photos" >
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile" >
         </activity>
     </application>
 

@@ -7,5 +7,6 @@
     <string name="title_activity_locations">Locations Activity</string>
     <string name="title_activity_search">Search Activity</string>
     <string name="title_activity_top_photos">TopPhotos</string>
+    <string name="title_activity_profile">ProfileActivity</string>
 
 </resources>

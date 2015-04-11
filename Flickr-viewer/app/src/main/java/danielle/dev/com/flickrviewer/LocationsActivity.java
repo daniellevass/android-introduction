@@ -17,7 +17,7 @@ public class LocationsActivity extends ActionBarActivity {
     private ListView listLocations;
 
 
-    private List<CityLocation> locations;
+    private List<TopLocationObject> topLocations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,31 +26,33 @@ public class LocationsActivity extends ActionBarActivity {
 
         listLocations = (ListView)findViewById(R.id.listLocations);
 
-        locations = new ArrayList<CityLocation>();
+        topLocations = new ArrayList<TopLocationObject>();
 
-        locations.add(new CityLocation("Hong Kong", "China", R.drawable.hongkong));
-        locations.add(new CityLocation("Bath", "UK", R.drawable.unitedkingdom));
-        locations.add(new CityLocation("San Francisco", "USA", R.drawable.unitedstates));
-        locations.add(new CityLocation("Spain", "Spain", R.drawable.spain));
-        locations.add(new CityLocation("Sydney", "Australia", R.drawable.australia));
-        locations.add(new CityLocation("London", "United Kingdom", R.drawable.unitedkingdom));
-        locations.add(new CityLocation("New York", "USA", R.drawable.unitedstates));
+        topLocations.add(new TopLocationObject("Hong Kong", "China", R.drawable.hongkong));
+
+        topLocations.add(new TopLocationObject("Bath", "UK", R.drawable.unitedkingdom));
+        topLocations.add(new TopLocationObject("San Francisco", "USA", R.drawable.unitedstates));
+        topLocations.add(new TopLocationObject("Spain", "Spain", R.drawable.spain));
+        topLocations.add(new TopLocationObject("Sydney", "Australia", R.drawable.australia));
+        topLocations.add(new TopLocationObject("London", "United Kingdom", R.drawable.unitedkingdom));
+        topLocations.add(new TopLocationObject("New York", "USA", R.drawable.unitedstates));
 
 
 
         //set up the adapter
-        LocationAdapter adapter = new LocationAdapter(locations);
+        LocationAdapter adapter = new LocationAdapter(topLocations);
 
         //set the adapter to our listview
         listLocations.setAdapter(adapter);
 
 
+
     }
 
 
-    private class LocationAdapter extends ArrayAdapter<CityLocation> {
+    private class LocationAdapter extends ArrayAdapter<TopLocationObject> {
 
-        public LocationAdapter(List<CityLocation> items) {
+        public LocationAdapter(List<TopLocationObject> items) {
             super(LocationsActivity.this, 0, items);
         }
 
@@ -66,12 +68,12 @@ public class LocationsActivity extends ActionBarActivity {
             TextView lblCountry = (TextView)convertView.findViewById(R.id.lblCountry);
 
             //get the location
-            CityLocation location = locations.get(position);
+            TopLocationObject location = topLocations.get(position);
 
             //set the ui elements to the location
-            imgIcon.setImageResource(location.getFlag());
-            lblCountry.setText(location.getCountry());
-            lblCity.setText(location.getCity());
+            imgIcon.setImageResource(location.getFlagResource());
+            lblCountry.setText(location.getCountryName());
+            lblCity.setText(location.getCityName());
 
             return convertView;
         }// end get view

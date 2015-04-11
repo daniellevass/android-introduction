@@ -2,14 +2,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#dedede"
+    android:background="#212121"
 >
 
     <ListView
         android:id="@+id/listLocations"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:divider="#212121"
+        android:divider="#323232"
         android:dividerHeight="2dp"
         />
 
