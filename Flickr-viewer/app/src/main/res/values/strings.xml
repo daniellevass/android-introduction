@@ -12,4 +12,7 @@
 
     <string name="title_activity_specific_location">SpecificLocationActivity</string>
 
+
+    <string name="FLICKR_API_KEY">68a955001427be845d9f461418692a04</string>
+
 </resources>

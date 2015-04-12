@@ -2,13 +2,63 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 >
-    <TextView
+
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B71C1C"
+        >
+
+        <TextView
             android:id="@+id/lblLocationTitle"
-            android:text="XXXX"
+            android:text="Hong Kong"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textSize="32sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#e9e9e9e9"/>
+
+        <ImageView
+            android:id="@+id/imgWeather"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/w_sunny"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/lblMaxMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="#e9e9e9e9"
+
+            android:text="1/0"
+            android:layout_below="@id/imgWeather"
+            android:layout_alignLeft="@id/imgWeather"
+            android:layout_alignRight="@id/imgWeather"
             android:gravity="center"
-            android:textSize="24sp"
-            android:layout_marginTop="20dp"/>
+            android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:background="#e9e9e9"
+        android:columnWidth="100dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        />
+
 
 </RelativeLayout>

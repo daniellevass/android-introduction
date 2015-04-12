@@ -32,13 +32,13 @@ public class LocationsActivity extends ActionBarActivity {
 
         locations = new ArrayList<TopLocationObject>();
 
-        locations.add(new TopLocationObject("Hong Kong", "China", R.drawable.hongkong));
-        locations.add(new TopLocationObject("Bath", "UK", R.drawable.unitedkingdom));
-        locations.add(new TopLocationObject("San Francisco", "USA", R.drawable.unitedstates));
-        locations.add(new TopLocationObject("Spain", "Spain", R.drawable.spain));
-        locations.add(new TopLocationObject("Sydney", "Australia", R.drawable.australia));
-        locations.add(new TopLocationObject("London", "United Kingdom", R.drawable.unitedkingdom));
-        locations.add(new TopLocationObject("New York", "USA", R.drawable.unitedstates));
+        locations.add(new TopLocationObject("Hong Kong", "China", R.drawable.hongkong, "#CC0000", R.drawable.w_foggy_night, 18, 26));
+        locations.add(new TopLocationObject("Bath", "UK", R.drawable.unitedkingdom, "#212121", R.drawable.w_sunny, 0, 0));
+        locations.add(new TopLocationObject("San Francisco", "USA", R.drawable.unitedstates, "#6A1B9A", R.drawable.w_sunny, 8, 19));
+        locations.add(new TopLocationObject("Spain", "Spain", R.drawable.spain, "#212121", R.drawable.w_sunny, 0, 0));
+        locations.add(new TopLocationObject("Sydney", "Australia", R.drawable.australia, "#212121", R.drawable.w_sunny, 0, 0));
+        locations.add(new TopLocationObject("London", "United Kingdom", R.drawable.unitedkingdom, "#212121", R.drawable.w_sunny, 0, 0));
+        locations.add(new TopLocationObject("New York", "USA", R.drawable.unitedstates, "#212121", R.drawable.w_sunny, 0, 0));
 
 
 
